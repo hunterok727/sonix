@@ -1,0 +1,12 @@
+Index
+
+<ul>
+    {{#each model as |trackList|}}
+      <li>{{trackList.title}}</li>
+    {{else}}
+      <li class="empty">No tracklists found</li>
+    {{/each}}
+</ul>
+
+
+{{outlet}}
