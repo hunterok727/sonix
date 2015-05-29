@@ -8,7 +8,7 @@ export default TrackList;
 
 TrackList.reopenClass({
   FIXTURES: [
-    { id: '11', title: 'My First Tracklist' },
+    { id: '11', title: 'Funky' },
     { id: '12', title: 'Another' },
     { id: '13', title: 'Boring' }
   ]
