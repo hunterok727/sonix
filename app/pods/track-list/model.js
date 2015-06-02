@@ -6,11 +6,3 @@ let TrackList = DS.Model.extend({
 });
 
 export default TrackList;
-
-TrackList.reopenClass({
-  FIXTURES: [
-    { id: '11', title: 'Funky', tracks: ['21', '22', '23', '24', '25'] },
-    { id: '12', title: 'Another', tracks: ['26', '27', '28'] },
-    { id: '13', title: 'Boring', tracks: ['29'] }
-  ]
-});

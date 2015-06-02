@@ -20,11 +20,9 @@ module.exports = function(app) {
 
   trackListsRouter.get('/:id', function(req, res) {
     res.send({
-      'track_lists': {
-        id: FIXTURES.filter(function(trackList) {
-          return trackList.id == req.params.id;
-        })[0]
-      }
+      'track_lists': FIXTURES.filter(function(trackList) {
+        return trackList.id == req.params.id;
+      })[0]
     });
   });
 
