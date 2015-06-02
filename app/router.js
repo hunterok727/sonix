@@ -7,7 +7,7 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('track-list', {path: 'track-list/:track_list_id'}, function() {
-    this.resource('track');
+    this.resource('track', { path: ':track_id' });
   });
 
 });

@@ -6,7 +6,7 @@ export default Ember.Route.extend({
     return this.store.find('track-list',
       params.track_list_id).then((trackList) => {
         tl = trackList;
-        return this.store.find('track', { trackList: trackList.id });
+        return this.store.find('track', { trackList: trackList.get('id') });
       }).then(() => tl);
   }
 });
