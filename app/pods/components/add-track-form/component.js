@@ -15,7 +15,6 @@ export default Ember.Component.extend({
 
   actions: {
     save: function () {
-
       if (this.validate()) {
         this.sendAction('onSave', this.getProperties('title', 'artist'));
       }

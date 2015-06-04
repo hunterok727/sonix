@@ -20,8 +20,11 @@ module.exports = function(app) {
     });
   });
 
+  var next = 10;
   tracksRouter.post('/', function(req, res) {
-    res.status(201).end();
+    var json = req.body;
+    json.track .id = '2' + next++;
+    res.send(201, json);
   });
 
   tracksRouter.get('/:id', function(req, res) {
@@ -44,5 +47,6 @@ module.exports = function(app) {
     res.status(204).end();
   });
 
+  app.use(require('body-parser').json());
   app.use('/api/tracks', tracksRouter);
 };
