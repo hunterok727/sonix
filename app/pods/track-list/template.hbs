@@ -15,5 +15,10 @@
         <li class="empty">No tracks found</li>
     {{/each}}
 </ul>
+<ul>
+  {{#link-to 'track-list' tagName='li'}}
+    {{link-to 'Page 2' 'track-list.paging' 2 0}}
+  {{/link-to}}
+</ul>
 
 {{outlet}}

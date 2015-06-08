@@ -12,9 +12,8 @@ export function initialize( container, application ) {
   }, { instantiate: false });
 
   ['track', 'track/new'].forEach((route) => {
-    application.inject('route:' + route, 'beforeModel', 'service:session-check')
+    application.inject('route:' + route, 'beforeModel', 'service:session-check');
   });
-
 }
 
 export default {

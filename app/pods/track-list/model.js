@@ -1,4 +1,5 @@
 import DS from 'ember-data';
+import Ember from 'ember';
 
 let TrackList = DS.Model.extend({
   title: DS.attr('string'),
