@@ -15,10 +15,13 @@
         <li class="empty">No tracks found</li>
     {{/each}}
 </ul>
-<ul>
-  {{#link-to 'track-list' tagName='li'}}
-    {{link-to 'Page 2' 'track-list.paging' 2 0}}
-  {{/link-to}}
+<ul class="list-inline">
+  <li>
+    {{#link-to 'track-list' (query-params page='1')}}Page 1{{/link-to}}
+  </li>
+  <li>
+    {{#link-to 'track-list' (query-params page='2')}}Page 2{{/link-to}}
+  </li>
 </ul>
 
 {{outlet}}
