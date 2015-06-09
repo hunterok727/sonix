@@ -7,7 +7,7 @@ export default Ember.Route.extend({
     },
     limit: {
       refreshModel : true
-    },
+    }
   },
 
   model (params) {
@@ -19,7 +19,7 @@ export default Ember.Route.extend({
         page: params.page,
         limit: params.limit
       };
-      console.log(trackList.tracks);
+      
       return this.store.find('track', query);
     }).then(() => tl);
   }

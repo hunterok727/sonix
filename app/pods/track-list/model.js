@@ -3,9 +3,9 @@ import Ember from 'ember';
 
 let TrackList = DS.Model.extend({
   title: DS.attr('string'),
-  tracks: DS.hasMany('track', { async: true }),
+  tracks: DS.hasMany('track'),
 
-  persistentTracks: Ember.computed.filterBy('tracks', 'isSaving', false)
+  persistentTracks: Ember.computed.filterBy('tracks', 'isNew', false)
 });
 
 export default TrackList;
