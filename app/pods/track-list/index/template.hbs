@@ -1,0 +1,21 @@
+<ul>
+  {{#each model as |track| }}
+      <li>
+        {{#link-to 'track' track.id }}
+          {{track.artist}} - {{track.title}}
+        {{/link-to}}
+      </li>
+  {{else}}
+      <li class="empty">No tracks found</li>
+  {{/each}}
+</ul>
+<ul class="list-inline">
+    <li>
+        <a href="#" {{action 'goPage' 1}}>Page 1</a>
+    </li>
+    <li>
+        <a href="#" {{action 'goPage' 2}}>Page 2</a>
+    </li>
+</ul>
+
+{{outlet}}

@@ -3,24 +3,4 @@
     {{#link-to 'track/new'}}Add a new track{{/link-to}}
 </p>
 
-<ul>
-    {{#each model.persistentTracks as |track| }}
-        <li>
-          {{#link-to 'track' track.id }}
-            {{track.artist}} - {{track.title}}
-          {{/link-to}}
-        </li>
-    {{else}}
-        <li class="empty">No tracks found</li>
-    {{/each}}
-</ul>
-<ul class="list-inline">
-  <li>
-    {{#link-to 'track-list' (query-params page='1')}}Page 1{{/link-to}}
-  </li>
-  <li>
-    <a href="#" {{action 'goPage' 2}}>Page 2</a>
-  </li>
-</ul>
-
 {{outlet}}
