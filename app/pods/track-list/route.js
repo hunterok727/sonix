@@ -19,7 +19,7 @@ export default Ember.Route.extend({
         page: params.page,
         limit: params.limit
       };
-      
+
       return this.store.find('track', query);
     }).then(() => tl);
   }

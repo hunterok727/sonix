@@ -1,5 +1,4 @@
 <h2>{{model.title}}</h2>
-
 <p>
     {{#link-to 'track/new'}}Add a new track{{/link-to}}
 </p>
@@ -20,7 +19,7 @@
     {{#link-to 'track-list' (query-params page='1')}}Page 1{{/link-to}}
   </li>
   <li>
-    {{#link-to 'track-list' (query-params page='2')}}Page 2{{/link-to}}
+    <a href="#" {{action 'goPage' 2}}>Page 2</a>
   </li>
 </ul>
 
