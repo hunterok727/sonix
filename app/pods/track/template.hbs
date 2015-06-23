@@ -1,6 +1,8 @@
-{{#with model}}
+{{#sx-modal title="Track details" onClose="closeModal"}}
+  {{#with model}}
     <h3>{{details}}</h3>
-{{/with}}
+  {{/with}}
+{{/sx-modal}}
 
 
 {{outlet}}

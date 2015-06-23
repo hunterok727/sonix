@@ -1,9 +1,10 @@
 <ul>
   {{#each model as |track| }}
       <li>
-        {{#link-to 'track' track.id }}
-          {{track.artist}} - {{track.title}}
-        {{/link-to}}
+          <a href="#" {{action 'openModal' 'track' track}}>
+            {{track.artist}} - {{track.title}}
+          </a>
+
       </li>
   {{else}}
       <li class="empty">No tracks found</li>
