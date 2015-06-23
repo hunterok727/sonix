@@ -1,6 +1,9 @@
 <h2>{{model.title}}</h2>
 <p>
+    <a href="#" {{action 'addNew' }}>Add a new track</a>
     {{#link-to 'track/new'}}Add a new track{{/link-to}}
+
+    <button {{action 'openModal' 'track/new'}}>Open modal</button>
 </p>
 
 {{outlet}}

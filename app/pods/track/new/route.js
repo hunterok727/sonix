@@ -1,8 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  actions: {
+  redirectTo: 'track-list',
 
+  actions: {
     addTrack: function (form) {
       let trackList = this.modelFor('track-list');
       form.trackList = trackList;
@@ -12,8 +13,7 @@ export default Ember.Route.extend({
     },
 
     closeModal: function () {
-      console.log('Close');
-      window.history.back();
+      this.transitionTo(this.redirectTo);
     }
   }
 });
