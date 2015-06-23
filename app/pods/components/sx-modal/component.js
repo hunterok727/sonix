@@ -8,16 +8,10 @@ export default Ember.Component.extend({
   didInsertElement: function() {
     this.$().modal()
       .on('hidden.bs.modal', () => {
-        this.sendAction('close');
+        this.sendAction('onClose');
       });
   },
   hide: function() {
     this.$().modal('hide');
-  },
-
-  actions: {
-    closeMe () {
-      this.sendAction('onClose');
-    }
   }
 });
