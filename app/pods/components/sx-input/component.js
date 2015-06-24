@@ -22,7 +22,9 @@ export default Ember.Component.extend({
     if (this.valueBinding) {
       this.valueBinding.disconnect(this);
     }
-    this.errorsBinding && this.errorsBinding.disconnect(this);
+    if (this.errorsBinding) {
+      this.errorsBinding.disconnect(this);
+    }
   }.on('willDestroyElement'),
 
   hasError: function() {
