@@ -13,5 +13,10 @@ export default Ember.Component.extend({
   },
   hide: function() {
     this.$().modal('hide');
+  },
+  actions: {
+    primaryAction: function () {
+      this.sendAction('primaryAction', this);
+    }
   }
 });

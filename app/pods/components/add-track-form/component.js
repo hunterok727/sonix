@@ -13,12 +13,13 @@ export default Ember.Component.extend({
     return this.get('artistStartsWithUpperCase');
   },
 
-  actions: {
-    save: function () {
-      if (this.validate()) {
-        this.sendAction('onSave', this.getProperties('title', 'artist'));
-      }
-    }
-  }
+  //actions: {
+  //  save: function () {
+  //    if (this.validate()) {
+  //      console.log('save');
+  //      this.sendAction('onSave', this.getProperties('title', 'artist'));
+  //    }
+  //  }
+  //}
 
 });

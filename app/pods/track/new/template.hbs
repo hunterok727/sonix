@@ -1,7 +1,9 @@
 Track new
 
-{{#sx-modal title="Add a new track" onClose="closeModal"}}
-  {{add-track-form onSave="addTrack"}}
+{{#sx-modal title="Add a new track" onClose="closeModal" primaryAction="addTrack"}}
+  {{#sx-form for=model}}
+    {{add-track-form}}
+  {{/sx-form}}
 {{/sx-modal}}
 
 {{outlet}}
