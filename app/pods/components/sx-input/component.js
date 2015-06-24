@@ -19,7 +19,9 @@ export default Ember.Component.extend({
   }.on('init').observes('for', 'form'),
 
   tearDownBindings: function() {
-    this.valueBinding && this.valueBinding.disconnect(this);
+    if (this.valueBinding) {
+      this.valueBinding.disconnect(this);
+    }
     this.errorsBinding && this.errorsBinding.disconnect(this);
   }.on('willDestroyElement'),
 

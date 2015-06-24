@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   actions: {
     closeModal: function () {
-      this.transitionTo('track-list', this.modelFor('track-list').id)
+      this.transitionTo('track-list', this.modelFor('track-list').id);
     }
   },
 
